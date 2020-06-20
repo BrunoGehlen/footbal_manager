@@ -27,7 +27,7 @@ namespace footbal_manager
                 string name = Console.ReadLine();
 
                 coachModel = new CoachModel(name);
-                Console.WriteLine("Manager:" + name);
+                Console.WriteLine("Manager: " + coachModel.name);
                 Console.ReadKey();
             }
         }

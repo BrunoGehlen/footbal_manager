@@ -1,14 +1,18 @@
 ﻿<Properties StartupConfiguration="{E333DEA9-09D2-4B2E-AAE3-C0C43F49A84E}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="footbal_manager/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="footbal_manager/controllers/GameManagerController.cs">
     <Files>
-      <File FileName="footbal_manager/Program.cs" Line="15" Column="72" />
+      <File FileName="footbal_manager/Program.cs" Line="19" Column="1" />
+      <File FileName="footbal_manager/controllers/GameManagerController.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="footbal_manager" expanded="True">
             <Node name="footbal_manager" expanded="True">
-              <Node name="Program.cs" selected="True" />
+              <Node name="controllers" expanded="True">
+                <Node name="GameManagerController.cs" selected="True" />
+              </Node>
+              <Node name="models" expanded="True" />
             </Node>
           </Node>
         </State>
