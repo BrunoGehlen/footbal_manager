@@ -1,0 +1,25 @@
+﻿<Properties StartupConfiguration="{E333DEA9-09D2-4B2E-AAE3-C0C43F49A84E}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="footbal_manager/Program.cs">
+    <Files>
+      <File FileName="footbal_manager/Program.cs" Line="15" Column="72" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="footbal_manager" expanded="True">
+            <Node name="footbal_manager" expanded="True">
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.footbal__manager PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

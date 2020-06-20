@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/viniciusbornholdt/Documents/Gibran/Unity/Projects/crazy_bit/_footbal_manager/footbal_manager/footbal_manager.csproj": {}
+    "/Users/viniciusbornholdt/Documents/Gibran/Unity/Projects/crazy_bit/footbal_manager/footbal_manager/footbal_manager.csproj": {}
   },
   "projects": {
-    "/Users/viniciusbornholdt/Documents/Gibran/Unity/Projects/crazy_bit/_footbal_manager/footbal_manager/footbal_manager.csproj": {
+    "/Users/viniciusbornholdt/Documents/Gibran/Unity/Projects/crazy_bit/footbal_manager/footbal_manager/footbal_manager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/viniciusbornholdt/Documents/Gibran/Unity/Projects/crazy_bit/_footbal_manager/footbal_manager/footbal_manager.csproj",
+        "projectUniqueName": "/Users/viniciusbornholdt/Documents/Gibran/Unity/Projects/crazy_bit/footbal_manager/footbal_manager/footbal_manager.csproj",
         "projectName": "footbal_manager",
-        "projectPath": "/Users/viniciusbornholdt/Documents/Gibran/Unity/Projects/crazy_bit/_footbal_manager/footbal_manager/footbal_manager.csproj",
+        "projectPath": "/Users/viniciusbornholdt/Documents/Gibran/Unity/Projects/crazy_bit/footbal_manager/footbal_manager/footbal_manager.csproj",
         "packagesPath": "/Users/viniciusbornholdt/.nuget/packages/",
-        "outputPath": "/Users/viniciusbornholdt/Documents/Gibran/Unity/Projects/crazy_bit/_footbal_manager/footbal_manager/obj/",
+        "outputPath": "/Users/viniciusbornholdt/Documents/Gibran/Unity/Projects/crazy_bit/footbal_manager/footbal_manager/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/viniciusbornholdt/.config/NuGet/NuGet.Config"
