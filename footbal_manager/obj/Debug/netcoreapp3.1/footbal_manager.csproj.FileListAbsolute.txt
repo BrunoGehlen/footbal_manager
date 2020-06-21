@@ -21,3 +21,5 @@ D:\C#\Projects\footbal_manager\footbal_manager\obj\Debug\netcoreapp3.1\footbal_m
 D:\C#\Projects\footbal_manager\footbal_manager\obj\Debug\netcoreapp3.1\footbal_manager.AssemblyInfo.cs
 D:\C#\Projects\footbal_manager\footbal_manager\obj\Debug\netcoreapp3.1\footbal_manager.dll
 D:\C#\Projects\footbal_manager\footbal_manager\obj\Debug\netcoreapp3.1\footbal_manager.pdb
+D:\C#\Projects\footbal_manager\footbal_manager\bin\Debug\netcoreapp3.1\Colorful.Console.dll
+D:\C#\Projects\footbal_manager\footbal_manager\obj\Debug\netcoreapp3.1\footbal_manager.csproj.CopyComplete
