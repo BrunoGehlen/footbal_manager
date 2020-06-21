@@ -11,6 +11,6 @@
 
   <ItemGroup>
     <PackageReference Include="Colorful.Console" Version="1.2.10" />
-    <PackageReference Include="ConsoleTables" Version="2.4.1" />
+    <PackageReference Include="BetterConsoleTables" Version="1.1.2" />
   </ItemGroup>
 </Project>

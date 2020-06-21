@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using Console = Colorful.Console;
-using ConsoleTables;
+using BetterConsoleTables;
 
 namespace footbal_manager
 {
@@ -18,10 +18,14 @@ namespace footbal_manager
         public void StartGame() //may return true to Main Method
         {
             WriteArt("FOOTBAL MANAGER!");
-            var table = new ConsoleTable("Hello Manager, please insert your information!");
+            var table = new Table("");
+            table.AddRow("Hello Manager, please insert your information!");
             table.AddRow("Presse Enter to continue...");
-            table.Write();
-            Console.WriteLine();
+            table.Config = TableConfiguration.MySqlSimple();
+
+            ConsoleTables tables = new ConsoleTables(table);
+
+            Console.Write(tables.ToString());              
 
             ConsoleKeyInfo keyInfo = Console.ReadKey(true);
             while (keyInfo.Key == ConsoleKey.Enter)
@@ -40,7 +44,8 @@ namespace footbal_manager
             }
         }
 
-        private void WriteArt(string text) {
+        private void WriteArt(string text)
+        {
 
             int DA = 244;
             int V = 212;
