@@ -1,0 +1,77 @@
+﻿Football Manager Notes
+
+Entities/Models
+
+
+- Person                                                                   *
+  - string name
+  - string nationality
+  - int age
+  - int moral
+  - int ability
+  - Experience experience
+
+- Experience
+  - int developmentCurve
+  - int Level
+
+- CoachModel : Person                                                      * 
+  - int charism
+  - int technique
+  - int teamWork
+  - int speciality //enum
+  
+- GameStrategy
+  - int playStrategy //enum: defencive, balanced, agressive
+  - bool higherGoalChance
+  - bool fakeInjury
+  
+- TeamModel                                                                *
+  - string flag
+  - string teamName
+  - Player[] playerName
+  - string teamCountry
+  - Stadium stadium
+  - Coach coach
+  - Human[] fans
+  - int moralAverage
+
+- PlayerModel : Person                                                     *
+  - int precision
+  - int stamina
+  - int speed
+  - int marketValue
+  - int position //enum: Defence, Attack, Midle, Goal Keeper.
+
+
+- RefereeModel : Human
+  - int strictOrLoose
+
+- StadiumModel
+  - string name
+  - int maxSits
+
+- Match
+  - TeamModel teamA 
+  - TeamModel teamB
+  - RefereeModel referee
+  - StadiumModel stadium
+  - int crowdFans
+  - TeamModel winner
+  - int teamAScore
+  - int teamBScore
+  - int matchTime
+
+Controllers
+
+- MatchController
+  - Match
+
+- FootballCupController
+  - TeamModel[] teams
+  - int prize
+  - string name
+  - Match matches[]
+  - TeamModel[][] matchTables
+
+- GameManagerController
