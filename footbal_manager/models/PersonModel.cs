@@ -5,15 +5,14 @@ using System.Text;
 namespace footbal_manager {
 
     public class PersonModel {
-        //Variables
-        //Strings
-        public string name;
-        public string nationality;
-        //ints
+
+        public string name { get; protected set; }
+        public string nationality; 
         public int age;
         public int moral;
         public int ability;
 
+        public PersonModel() { }
         // Person's constructor
         public PersonModel(string name, string nationality, int age, int moral, int ability) {
 

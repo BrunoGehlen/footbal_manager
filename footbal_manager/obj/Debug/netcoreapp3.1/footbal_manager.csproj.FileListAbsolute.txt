@@ -10,3 +10,14 @@
 /Users/viniciusbornholdt/Documents/Gibran/Unity/Projects/crazy_bit/footbal_manager/footbal_manager/obj/Debug/netcoreapp3.1/footbal_manager.dll
 /Users/viniciusbornholdt/Documents/Gibran/Unity/Projects/crazy_bit/footbal_manager/footbal_manager/obj/Debug/netcoreapp3.1/footbal_manager.pdb
 /Users/viniciusbornholdt/Documents/Gibran/Unity/Projects/crazy_bit/footbal_manager/footbal_manager/obj/Debug/netcoreapp3.1/footbal_manager.genruntimeconfig.cache
+D:\C#\Projects\footbal_manager\footbal_manager\bin\Debug\netcoreapp3.1\footbal_manager.exe
+D:\C#\Projects\footbal_manager\footbal_manager\bin\Debug\netcoreapp3.1\footbal_manager.deps.json
+D:\C#\Projects\footbal_manager\footbal_manager\bin\Debug\netcoreapp3.1\footbal_manager.runtimeconfig.json
+D:\C#\Projects\footbal_manager\footbal_manager\bin\Debug\netcoreapp3.1\footbal_manager.runtimeconfig.dev.json
+D:\C#\Projects\footbal_manager\footbal_manager\bin\Debug\netcoreapp3.1\footbal_manager.dll
+D:\C#\Projects\footbal_manager\footbal_manager\bin\Debug\netcoreapp3.1\footbal_manager.pdb
+D:\C#\Projects\footbal_manager\footbal_manager\obj\Debug\netcoreapp3.1\footbal_manager.csprojAssemblyReference.cache
+D:\C#\Projects\footbal_manager\footbal_manager\obj\Debug\netcoreapp3.1\footbal_manager.AssemblyInfoInputs.cache
+D:\C#\Projects\footbal_manager\footbal_manager\obj\Debug\netcoreapp3.1\footbal_manager.AssemblyInfo.cs
+D:\C#\Projects\footbal_manager\footbal_manager\obj\Debug\netcoreapp3.1\footbal_manager.dll
+D:\C#\Projects\footbal_manager\footbal_manager\obj\Debug\netcoreapp3.1\footbal_manager.pdb

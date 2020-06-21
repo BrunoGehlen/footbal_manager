@@ -1,11 +1,14 @@
 ﻿using System;
 namespace footbal_manager
 {
-    public class CoachModel
+    public class CoachModel : PersonModel
     {
-        public string name { get; private set; } 
+        public CoachModel() { }
 
-        public CoachModel(string name) { }
+        public CoachModel(string name) {
+
+            this.name = name;
+        }
         
     }
 }
