@@ -1,7 +1,44 @@
 ﻿Football Manager Notes
 
-Entities/Models
+What is the objective of this game/system
+ - learn C# language
+ - develop a footbal game for console
 
+What is the game objective
+ - manage a team to win simulated footbal games
+
+Game flow
+ - Welcome
+    - new game
+        - Select available game option
+        - Register Coach
+        - Select team
+        - Begin New Game*
+
+    - about
+        - some some info about the game
+
+ - New Game*
+   World Cup
+   - My Team
+        - Player info
+        - Team formation and players
+        - Training
+        - calendar
+   - Champs table
+        - show calendar with games
+   - Next Match
+        - Begin new Match
+
+  - New Match
+        - show match info
+        - start game
+        - simulate game
+        - show results
+
+--------------------------------------------------------------------------------
+
+Entities/Models
 
 - Person                                                                   *
   - string name
@@ -43,7 +80,6 @@ Entities/Models
   - int marketValue
   - int position //enum: Defence, Attack, Midle, Goal Keeper.
 
-
 - RefereeModel : Human
   - int strictOrLoose
 
@@ -61,6 +97,8 @@ Entities/Models
   - int teamAScore
   - int teamBScore
   - int matchTime
+
+--------------------------------------------------------------------------------
 
 Controllers
 
