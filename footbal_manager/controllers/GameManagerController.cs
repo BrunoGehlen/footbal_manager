@@ -13,9 +13,12 @@ namespace footbal_manager
         // init
         public GameManagerController() { }
 
+        public void StartGame() {
+            ConsoleWriter.TextArt("FOOTBAL MANAGER");
+            }
 
         // public methods
-        public void StartGame() //may return true to Main Method
+        public void CreateCoach() //may return true to Main Method
         {
             ConsoleWriter.TextArt("FOOTBAL MANAGER");
             var table = new Table("");
@@ -49,24 +52,5 @@ namespace footbal_manager
         }
 
 
-        /*private void TableTest() {
-                {
-                var table = new ConsoleTable("one", "two", "three");
-                table.AddRow(1, 2, 3)
-                     .AddRow("this line should be longer", "yes it is", "oh");
-
-                table.Write();
-                Console.WriteLine();
-
-                var rows = Enumerable.Repeat(new Something(), 10);
-
-                ConsoleTable
-                    .From<Something>(rows)
-                    .Configure(o => o.NumberAlignment = Alignment.Right)
-                    .Write(Format.Alternative);
-
-                Console.ReadKey();
-                }
-            }*/
     }
 }

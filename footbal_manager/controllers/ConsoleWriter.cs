@@ -9,6 +9,22 @@ namespace footbal_manager {
     
     public static class ConsoleWriter {
         
+        private static void DefaultTitile() => ConsoleWriter.TextArt("FOOTBAL MANAGER");
+
+        private static void MenuTable(string title, string[] values) {
+
+            Table table = new Table(title);
+            table.AddRow("Hello Manager, please insert your information!");
+            table.AddRow("Presse Enter to continue...");
+            table.Config = TableConfiguration.MySqlSimple();
+
+        }
+
+        public static void PrintWelcomeText() {
+            DefaultTitile();
+            
+        }
+
         public static void TextArt(string text) {
 
             int red = 0;
