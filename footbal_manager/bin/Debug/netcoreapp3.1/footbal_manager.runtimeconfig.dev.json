@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "/Users/viniciusbornholdt/.dotnet/store/|arch|/|tfm|",
-      "/Users/viniciusbornholdt/.nuget/packages"
+      "C:\\Users\\Vinicius Gibran\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Vinicius Gibran\\.nuget\\packages"
     ]
   }
 }

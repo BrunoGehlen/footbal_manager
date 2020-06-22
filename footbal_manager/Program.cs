@@ -8,9 +8,6 @@ namespace footbal_manager
 
         static void Main(string[] args)
         {
-            
-            Console.WriteLine("\nHello!\n\nWelcome to FOOTBAL MANAGER!\n");
-
             gameManager.StartGame();
             Console.ReadKey(true); //true to not print input on console
         }

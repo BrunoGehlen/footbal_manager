@@ -25,6 +25,7 @@ Game flow
         - Team formation and players
         - Training
         - calendar
+
    - Champs table
         - show calendar with games
    - Next Match
@@ -42,21 +43,20 @@ Entities/Models
 
 - Person                                                                   *
   - string name
-  - string nationality
+  - string nationality // remove
   - int age
   - int moral
-  - int ability
   - Experience experience
 
 - Experience
   - int developmentCurve
   - int Level
 
-- CoachModel : Person                                                      * 
-  - int charism
+- CoachModel : Person                                                    * 
+  - int charism      //enum: neutral, hostile, friendly
   - int technique
   - int teamWork
-  - int speciality //enum
+  - int speciality   //enum: defencive, balanced, agressive
   
 - GameStrategy
   - int playStrategy //enum: defencive, balanced, agressive
@@ -97,6 +97,10 @@ Entities/Models
   - int teamAScore
   - int teamBScore
   - int matchTime
+ 
+ ** Display post game conversation - 
+ ** choose from friendly, hostile, or neltral aproach, setting new values to charims.
+
 
 --------------------------------------------------------------------------------
 

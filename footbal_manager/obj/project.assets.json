@@ -2471,24 +2471,26 @@
     ]
   },
   "packageFolders": {
-    "/Users/viniciusbornholdt/.nuget/packages/": {}
+    "C:\\Users\\Vinicius Gibran\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/viniciusbornholdt/Documents/Gibran/Unity/Projects/crazy_bit/footbal_manager/footbal_manager/footbal_manager.csproj",
+      "projectUniqueName": "D:\\C#\\Projects\\footbal_manager\\footbal_manager\\footbal_manager.csproj",
       "projectName": "footbal_manager",
-      "projectPath": "/Users/viniciusbornholdt/Documents/Gibran/Unity/Projects/crazy_bit/footbal_manager/footbal_manager/footbal_manager.csproj",
-      "packagesPath": "/Users/viniciusbornholdt/.nuget/packages/",
-      "outputPath": "/Users/viniciusbornholdt/Documents/Gibran/Unity/Projects/crazy_bit/footbal_manager/footbal_manager/obj/",
+      "projectPath": "D:\\C#\\Projects\\footbal_manager\\footbal_manager\\footbal_manager.csproj",
+      "packagesPath": "C:\\Users\\Vinicius Gibran\\.nuget\\packages\\",
+      "outputPath": "D:\\C#\\Projects\\footbal_manager\\footbal_manager\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/viniciusbornholdt/.config/NuGet/NuGet.Config"
+        "C:\\Users\\Vinicius Gibran\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -2529,7 +2531,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.301/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

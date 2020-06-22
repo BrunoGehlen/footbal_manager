@@ -7,8 +7,8 @@ namespace footbal_manager
 {
     public class GameManagerController
     {
-
         private CoachModel coachModel;
+        
 
         // init
         public GameManagerController() { }
@@ -17,7 +17,7 @@ namespace footbal_manager
         // public methods
         public void StartGame() //may return true to Main Method
         {
-            WriteArt("FOOTBAL MANAGER!");
+            ConsoleWriter.TextArt("FOOTBAL MANAGER");
             var table = new Table("");
             table.AddRow("Hello Manager, please insert your information!");
             table.AddRow("Presse Enter to continue...");
@@ -48,16 +48,7 @@ namespace footbal_manager
             }
         }
 
-        private void WriteArt(string text)
-        {
 
-            int red = 0;
-            int green = 255;
-            int blue = 0;
-            
-            Console.WriteAscii(text, Color.FromArgb(red, green, blue));
-
-        }
         /*private void TableTest() {
                 {
                 var table = new ConsoleTable("one", "two", "three");
