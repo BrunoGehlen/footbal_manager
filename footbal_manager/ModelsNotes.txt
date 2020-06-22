@@ -52,7 +52,7 @@ Entities/Models
   - int developmentCurve
   - int Level
 
-- CoachModel : Person                                                    * 
+- CoachModel : Person                                                      **
   - int charism      //enum: neutral, hostile, friendly
   - int technique
   - int teamWork

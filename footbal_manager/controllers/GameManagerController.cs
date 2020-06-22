@@ -11,17 +11,30 @@ namespace footbal_manager
         // init
         public GameManagerController() { }
 
-        public void StartGame()
-        {
+        public void StartGame() {
+
             string option = ConsoleHandler.Welcome();
-            Console.Write(option);
+            
+            switch (option) {
+
+                case "[1] New Game":
+                    CreateNewCoach();
+                    break;
+
+                case "[2] About":
+                    break;
+                                       
+            }
         }
 
         // public methods
-        public void CreateCoach() //may return true to Main Method
+        public void CreateNewCoach() //may return true to Main Method
         {
-            ConsoleKeyInfo keyInfo = Console.ReadKey(true);
-            while (keyInfo.Key == ConsoleKey.Enter)
+            
+
+            string coach = ConsoleHandler.CreateCoach();
+            //ConsoleKeyInfo keyInfo = Console.ReadKey(true);
+            /*while (keyInfo.Key == ConsoleKey.Enter)
             {
                 // clear console
                 Console.Clear();
@@ -34,7 +47,7 @@ namespace footbal_manager
                 Console.WriteLine("Manager: " + coachModel.name);
 
                 Console.ReadKey();
-            }
+            }*/
         }
 
 

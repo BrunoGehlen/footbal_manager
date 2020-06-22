@@ -14,15 +14,28 @@ namespace footbal_manager
         private static readonly string defaultTitle = "FOOTBAL MANAGER";
 
         // public methods
-        public static string Welcome()
-        {
+        public static string Welcome() {
 
             string[] descriptionLines = { "Welcome to Footbal Manager!", "Select your option:" };
             string[] options = { "[1] New Game", "[2] About" };
 
             int optionSelected = OptionChoice(false, descriptionLines, options);
 
-            return options[optionSelected];
+            return options[optionSelected].Replace(" <<", "");
+        }
+
+        public static string CreateCoach() {
+            Console.Clear();
+            
+            CoachModel coach;
+
+            string[] descriptionLines = { "Hello coach!", "Before you continue, please insert your information" };
+            string[] options = { "[1] Name" };
+            OptionMenuTableUnicodeAlt(descriptionLines, options);
+            Console.ReadKey();
+
+            return "";
+
         }
 
         // private methods
@@ -89,9 +102,6 @@ namespace footbal_manager
 
                 // print table
                 OptionMenuTableUnicodeAlt(descriptionLines, options);
-
-                Console.Write(currentSelection);
-                Console.Write("");
 
                 key = Console.ReadKey(true).Key;
 
