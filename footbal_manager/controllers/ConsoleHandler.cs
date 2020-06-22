@@ -18,11 +18,9 @@ namespace footbal_manager
         {
             DefaultTitile();
             string[] descriptionLines = { "Welcome to Footbal Manager!", "Select your option:" };
-            string[] options = { "1. New Game", "2. About" };
+            string[] options = { "[1] New Game", "[2] About" };
 
-            OptionMenuTableUnicodeAlt(descriptionLines, options);
-
-            //MultipleChoice(false, options);
+            OptionChoice(false, descriptionLines, options);
 
             return "";
         }
@@ -58,13 +56,14 @@ namespace footbal_manager
 
         }
 
-        private static int MultipleChoice(bool canCancel, params string[] options)
-        {
-            const int startX = 1;
-            const int startY = 1;
-            const int optionsPerLine = 1;
-            const int spacingPerLine = 1;
 
+        private static int OptionChoice(bool canCancel,string[] descriptionLines, string[] options)
+        {
+
+            //const int optionsPerLine = 1;
+            //const int spacingPerLine = 1;
+
+            int optinsRange = options.Length - 1;
             int currentSelection = 0;
 
             ConsoleKey key;
@@ -74,56 +73,43 @@ namespace footbal_manager
             do
             {
                 Console.Clear();
-                string[] descriptionLines = { "Welcome to Footbal Manager!", "Select your option:" };
-                OptionMenuTableUnicodeAlt(descriptionLines, options);
+
+                if (currentSelection < 0) { currentSelection = optinsRange; }
+                if (currentSelection > optinsRange) { currentSelection = 0; }
 
                 for (int i = 0; i < options.Length; i++)
                 {
-                    //Console.SetCursorPosition(startX + (i % optionsPerLine) * spacingPerLine, startY + i / optionsPerLine);
-
-                    if (i == currentSelection)
-                        Console.BackgroundColor = Color.Red;
-
-                    Console.Write(options[i]);
-
-                    Console.ResetColor();
+                    options[i] = options[i].Replace(" <<", "");
+                    if (i == currentSelection) { options[i] = options[i] + " <<"; }
                 }
+
+                // print table
+                OptionMenuTableUnicodeAlt(descriptionLines, options);
+
+                Console.Write(currentSelection);
+                Console.Write("");
 
                 key = Console.ReadKey(true).Key;
 
                 switch (key)
                 {
                     case ConsoleKey.LeftArrow:
-                        {
-                            if (currentSelection % optionsPerLine > 0)
-                                currentSelection--;
-                            break;
-                        }
-                    case ConsoleKey.RightArrow:
-                        {
-                            if (currentSelection % optionsPerLine < optionsPerLine - 1)
-                                currentSelection++;
-                            break;
-                        }
-                    case ConsoleKey.UpArrow:
-                        {
-                            if (currentSelection >= optionsPerLine)
-                                currentSelection -= optionsPerLine;
-                            break;
-                        }
                     case ConsoleKey.DownArrow:
-                        {
-                            if (currentSelection + optionsPerLine < options.Length)
-                                currentSelection += optionsPerLine;
-                            break;
-                        }
+
+                        currentSelection--;
+                        break;
+
+                    case ConsoleKey.RightArrow:
+                    case ConsoleKey.UpArrow:
+
+                        currentSelection++;
+                        break;
+
                     case ConsoleKey.Escape:
-                        {
-                            if (canCancel)
-                                return -1;
-                            break;
-                        }
+                        if (canCancel) { return -1; }
+                        break;
                 }
+
             } while (key != ConsoleKey.Enter);
 
             Console.CursorVisible = true;
