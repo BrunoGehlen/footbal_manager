@@ -1,12 +1,13 @@
 ﻿<Properties StartupConfiguration="{E333DEA9-09D2-4B2E-AAE3-C0C43F49A84E}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
-  <MonoDevelop.Ide.Workbench ActiveDocument="footbal_manager/controllers/GameManagerController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="footbal_manager/controllers/ConsoleWriter.cs">
     <Files>
-      <File FileName="footbal_manager/Program.cs" Line="18" Column="2" />
+      <File FileName="footbal_manager/Program.cs" Line="15" Column="2" />
       <File FileName="footbal_manager/models/CoachModel.cs" />
       <File FileName="footbal_manager/_learning_support/Publication.cs" />
       <File FileName="footbal_manager/_learning_support/Book.cs" />
       <File FileName="footbal_manager/ModelsNotes.txt" />
-      <File FileName="footbal_manager/controllers/GameManagerController.cs" Line="22" Column="1" />
+      <File FileName="footbal_manager/controllers/GameManagerController.cs" />
+      <File FileName="footbal_manager/controllers/ConsoleWriter.cs" Line="18" Column="57" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -19,7 +20,7 @@
               </Node>
               <Node name="_learning_support" expanded="True" />
               <Node name="controllers" expanded="True">
-                <Node name="GameManagerController.cs" selected="True" />
+                <Node name="ConsoleWriter.cs" selected="True" />
               </Node>
               <Node name="models" expanded="True" />
             </Node>
