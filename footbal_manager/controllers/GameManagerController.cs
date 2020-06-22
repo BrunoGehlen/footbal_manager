@@ -25,7 +25,11 @@ namespace footbal_manager
 
             ConsoleTables tables = new ConsoleTables(table);
 
-            Console.Write(tables.ToString());              
+            Console.Write(tables.ToString());
+
+            string gb = "🇨🇳";
+
+            Console.Write(gb);
 
             ConsoleKeyInfo keyInfo = Console.ReadKey(true);
             while (keyInfo.Key == ConsoleKey.Enter)
@@ -47,11 +51,11 @@ namespace footbal_manager
         private void WriteArt(string text)
         {
 
-            int DA = 244;
-            int V = 212;
-            int ID = 255;
-
-            Console.WriteAscii(text, Color.FromArgb(DA, V, ID));
+            int red = 0;
+            int green = 255;
+            int blue = 0;
+            
+            Console.WriteAscii(text, Color.FromArgb(red, green, blue));
 
         }
         /*private void TableTest() {

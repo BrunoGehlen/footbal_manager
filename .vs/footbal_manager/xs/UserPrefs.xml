@@ -1,4 +1,4 @@
-﻿<Properties StartupConfiguration="{E333DEA9-09D2-4B2E-AAE3-C0C43F49A84E}|Default">
+﻿<Properties StartupConfiguration="{E333DEA9-09D2-4B2E-AAE3-C0C43F49A84E}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
   <MonoDevelop.Ide.Workbench ActiveDocument="footbal_manager/controllers/GameManagerController.cs">
     <Files>
       <File FileName="footbal_manager/Program.cs" Line="18" Column="2" />
