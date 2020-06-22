@@ -16,13 +16,13 @@ namespace footbal_manager
         // public methods
         public static string Welcome()
         {
-            
+
             string[] descriptionLines = { "Welcome to Footbal Manager!", "Select your option:" };
             string[] options = { "[1] New Game", "[2] About" };
 
-            OptionChoice(false, descriptionLines, options);
+            int optionSelected = OptionChoice(false, descriptionLines, options);
 
-            return "";
+            return options[optionSelected];
         }
 
         // private methods
@@ -30,7 +30,7 @@ namespace footbal_manager
 
         private static void OptionMenuTableUnicodeAlt(string[] descriptionLines, string[] options)
         {
-            
+
             ColumnHeader header = new ColumnHeader(defaultTitle, Alignment.Left, Alignment.Center);
             var table = new Table(header);
 
@@ -61,7 +61,7 @@ namespace footbal_manager
         }
 
 
-        private static int OptionChoice(bool canCancel,string[] descriptionLines, string[] options)
+        private static int OptionChoice(bool canCancel, string[] descriptionLines, string[] options)
         {
 
             //const int optionsPerLine = 1;
@@ -116,7 +116,7 @@ namespace footbal_manager
 
             } while (key != ConsoleKey.Enter);
 
-            Console.CursorVisible = true;
+            //Console.CursorVisible = true;
 
             return currentSelection;
         }
