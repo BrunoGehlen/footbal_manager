@@ -16,7 +16,7 @@ namespace footbal_manager
         // public methods
         public static string Welcome()
         {
-            DefaultTitile();
+            
             string[] descriptionLines = { "Welcome to Footbal Manager!", "Select your option:" };
             string[] options = { "[1] New Game", "[2] About" };
 
@@ -30,6 +30,7 @@ namespace footbal_manager
 
         private static void OptionMenuTableUnicodeAlt(string[] descriptionLines, string[] options)
         {
+            
             ColumnHeader header = new ColumnHeader(defaultTitle, Alignment.Left, Alignment.Center);
             var table = new Table(header);
 
@@ -40,8 +41,11 @@ namespace footbal_manager
             table.Config = TableConfiguration.UnicodeAlt();
 
             ConsoleTables tables = new ConsoleTables(table);
+
+            DefaultTitile();
             Console.Write(tables.ToString());
 
+            // test case
             Console.WriteLine(tables.ToString(), Color.Green); //with color
         }
 
