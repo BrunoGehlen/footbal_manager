@@ -14,7 +14,9 @@ namespace footbal_manager
         private static readonly string defaultTitle = "FOOTBAL MANAGER";
 
         // public methods
-        public static string Welcome() {
+        public static string Welcome()
+        {
+            Console.Clear();
 
             string[] descriptionLines = { "Welcome to Footbal Manager!", "Select your option:" };
             string[] options = { "[1] New Game", "[2] About" };
@@ -24,15 +26,76 @@ namespace footbal_manager
             return options[optionSelected].Replace(" <<", "");
         }
 
-        public static string CreateCoach() {
+        public static string CreateCoach()
+        {
             Console.Clear();
-            
-            CoachModel coach;
 
             string[] descriptionLines = { "Hello coach!", "Before you continue, please insert your information" };
-            string[] options = { "[1] Name" };
-            OptionMenuTableUnicodeAlt(descriptionLines, options);
-            Console.ReadKey();
+            var options = new List<string>();
+            options.Add("[1] Name:");
+
+            //coach properties
+            int age = 0;
+            string name = null;
+            CoachSpeciality speciality = CoachSpeciality.Agressive;
+
+
+            bool allDone = false;
+            ConsoleKey key;
+            Console.CursorVisible = true;
+
+            do
+            {
+                Console.Clear();
+                OptionMenuTableUnicodeAlt(descriptionLines, options.ToArray());
+
+                string input = Console.ReadLine();
+                key = Console.ReadKey(true).Key;
+
+                if (key == ConsoleKey.Enter)
+                {
+
+                    // get manager name
+                    if (name == null)
+                    {
+                        name = input;
+                        string coachNameRow = " - Coach Name: " + name;
+                        options.Add(coachNameRow);
+                        Console.WriteLine(coachNameRow);
+
+                    }
+                    else if (age <= 0)
+                    {
+                        string ageString = input;
+
+                        int ageValue = 0;
+                        if (Int32.TryParse(ageString, out ageValue))
+                        {
+                            age = ageValue;
+                            string ageRow = " - Coach Age: " + age;
+                            options.Add("");
+                            options.Add("[2] Age:");
+                            options.Add(ageRow);
+                            Console.WriteLine(ageRow);
+
+                        }
+                        else { break; }
+                    }
+                    else
+                    {
+                        string[] specialities = { "Aggressive, Defencive, Balanced" };
+                        string[] emptyDescriptions = { "" };
+                        OptionChoice(false, emptyDescriptions, specialities);
+                    }
+
+
+                    Console.ReadKey();
+                }
+
+
+
+            } while (!allDone);
+
 
             return "";
 

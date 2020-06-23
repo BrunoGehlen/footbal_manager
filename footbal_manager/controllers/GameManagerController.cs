@@ -33,21 +33,7 @@ namespace footbal_manager
             
 
             string coach = ConsoleHandler.CreateCoach();
-            //ConsoleKeyInfo keyInfo = Console.ReadKey(true);
-            /*while (keyInfo.Key == ConsoleKey.Enter)
-            {
-                // clear console
-                Console.Clear();
-
-                // get manager name
-                Console.WriteLine("1. Please begin with your name:");
-                string name = Console.ReadLine();
-
-                coachModel = new CoachModel(name);
-                Console.WriteLine("Manager: " + coachModel.name);
-
-                Console.ReadKey();
-            }*/
+            
         }
 
 
