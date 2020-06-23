@@ -87,9 +87,6 @@ namespace footbal_manager
                         string[] emptyDescriptions = { "" };
                         OptionChoice(false, emptyDescriptions, specialities);
                     }
-
-
-                    Console.ReadKey();
                 }
 
 
