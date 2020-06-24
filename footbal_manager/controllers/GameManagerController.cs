@@ -37,6 +37,20 @@ namespace footbal_manager
         {
             string[] descriptionLines = { "Hello " + coach.name , "Select your game option:" };
             string[] options = { "[1] World Cup" };
+
+            int selectedOption = ConsoleHandler.OptionChoice(false, descriptionLines, options);
+
+            switch (selectedOption) {
+                case 0:
+                    StartNewWorldCup();
+                    break;
+            };
+        }
+
+        private void StartNewWorldCup()
+        {
+            ConsoleHandler.TextArt("WORLD CUP");
+            Console.ReadKey();
         }
     }
 }

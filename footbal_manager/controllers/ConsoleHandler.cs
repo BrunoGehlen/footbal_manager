@@ -73,7 +73,7 @@ namespace footbal_manager
                         string[] specialities = { "AGRESSIVE", "DEFENCIVE", "BALANCED" };
                         int especialityChoiceIndex = OptionChoice(false, title, specialities);
 
-                        options[2] = "[3] Speciality: " + specialities[especialityChoiceIndex];
+                        options[2] = "[3] Speciality: " + specialities[especialityChoiceIndex].Replace(" <<", "");
                         options.Add("");
                         options.Add("Press Enter to continue...");
 
@@ -162,13 +162,6 @@ namespace footbal_manager
                 specialityInput.speciality);
         }
 
-        public static int GameOption(string[] descriptionLines, string[] options)
-        {
-
-
-            return 0;
-        }
-
         // private methods
         private static void DefaultTitile() => ConsoleHandler.TextArt(defaultTitle);
 
@@ -193,19 +186,18 @@ namespace footbal_manager
             //Console.WriteLine(tables.ToString(), Color.Green); //with color
         }
 
-        private static void TextArt(string text)
+        public static void TextArt(string text)
         {
-
+            Console.Clear();
             int red = 0;
             int green = 255;
             int blue = 0;
 
             Console.WriteAscii(text, Color.FromArgb(red, green, blue));
-
         }
 
 
-        private static int OptionChoice(bool canCancel, string[] descriptionLines, string[] options)
+        public static int OptionChoice(bool canCancel, string[] descriptionLines, string[] options)
         {
 
             //const int optionsPerLine = 1;
