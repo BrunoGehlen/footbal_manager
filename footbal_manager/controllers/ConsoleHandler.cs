@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Diagnostics;
+using System.ComponentModel;
+using System.Threading;
 using System.Collections.Generic;
 using System.Text;
 using System.Drawing;
@@ -26,76 +29,144 @@ namespace footbal_manager
             return options[optionSelected].Replace(" <<", "");
         }
 
-        public static string CreateCoach()
+        public static CoachModel CreateCoach()
         {
             Console.Clear();
 
             string[] descriptionLines = { "Hello coach!", "Before you continue, please insert your information" };
             var options = new List<string>();
-            options.Add("[1] Name:");
+            options.Add("[1] Name: ");
 
             //coach properties
-            int age = 0;
-            string name = null;
-            CoachSpeciality speciality = CoachSpeciality.Agressive;
+            CoachSpeciality speciality = CoachSpeciality.DefaultNone;
+            var nameInput = (name: "", done: false);
+            var ageInput = (ageString: "", done: false);
+            var specialityInput = (speciality: speciality, done: false);
 
-
-            bool allDone = false;
-            ConsoleKey key;
-            Console.CursorVisible = true;
+            bool allInfoDone = false;
+            Console.CursorVisible = false;
 
             do
             {
                 Console.Clear();
                 OptionMenuTableUnicodeAlt(descriptionLines, options.ToArray());
+                ConsoleKey input = Console.ReadKey(true).Key;
 
-                string input = Console.ReadLine();
-                key = Console.ReadKey(true).Key;
-
-                if (key == ConsoleKey.Enter)
+                // update table options
+                if (input == ConsoleKey.Enter)
                 {
 
-                    // get manager name
-                    if (name == null)
+                    // age
+                    if (!nameInput.done && nameInput.name.Length > 2)
                     {
-                        name = input;
-                        string coachNameRow = " - Coach Name: " + name;
-                        options.Add(coachNameRow);
-                        Console.WriteLine(coachNameRow);
-
+                        options.Add("[2] Age: ");
+                        nameInput.done = true;
                     }
-                    else if (age <= 0)
-                    {
-                        string ageString = input;
 
-                        int ageValue = 0;
-                        if (Int32.TryParse(ageString, out ageValue))
+                    // speciality
+                    else if (!ageInput.done && ageInput.ageString.Length > 1)
+                    {
+                        options.Add("[3] Speciality: ");
+                        ageInput.done = true;
+
+                        string[] title = { "Please select your Speciality:" };
+                        string[] specialities = { "AGRESSIVE", "DEFENCIVE", "BALANCED" };
+                        int especialityChoiceIndex = OptionChoice(false, title, specialities);
+
+                        options[2] = "[3] Speciality: " + specialities[especialityChoiceIndex];
+                        options.Add("");
+                        options.Add("Press Enter to continue...");
+
+                        switch (especialityChoiceIndex)
                         {
-                            age = ageValue;
-                            string ageRow = " - Coach Age: " + age;
-                            options.Add("");
-                            options.Add("[2] Age:");
-                            options.Add(ageRow);
-                            Console.WriteLine(ageRow);
+                            case 0:
+                                specialityInput.speciality = CoachSpeciality.Agressive;
+                                break;
+                            case 1:
+                                specialityInput.speciality = CoachSpeciality.Defencive;
+                                break;
+                            case 2:
+                                specialityInput.speciality = CoachSpeciality.Balanced;
+                                break;
+                        };
 
-                        }
-                        else { break; }
                     }
-                    else
+
+                    // all info
+                    else if (!specialityInput.done && specialityInput.speciality != CoachSpeciality.DefaultNone)
                     {
-                        string[] specialities = { "Aggressive, Defencive, Balanced" };
-                        string[] emptyDescriptions = { "" };
-                        OptionChoice(false, emptyDescriptions, specialities);
+                        allInfoDone = true;
                     }
                 }
 
+                // get input values
+                else
+                {
+                    // name
+                    if (!nameInput.done)
+                    {
+                        switch (input)
+                        {
+                            case ConsoleKey.Backspace:
+                                if (String.IsNullOrEmpty(nameInput.name)) { break; }
+                                nameInput.name = nameInput.name.Remove(nameInput.name.Length - 1);
+                                break;
+                            case ConsoleKey.Spacebar:
+                                nameInput.name += " ";
+                                break;
+                            default:
+                                nameInput.name += input.ToString();
+                                break;
+                        };
+
+                        options[0] = "[1] Name: " + nameInput.name;
+                    }
+
+                    // Age
+                    else if (!ageInput.done)
+                    {
+                        switch (input)
+                        {
+                            case ConsoleKey.Backspace:
+                                if (String.IsNullOrEmpty(ageInput.ageString)) { break; }
+                                ageInput.ageString = ageInput.ageString.Remove(ageInput.ageString.Length - 1);
+                                break;
+
+                            default:
+                                string inputValueString = input.ToString().Replace("D", "");
+
+                                if (int.TryParse(inputValueString, out _))
+                                {
+                                    if (ageInput.ageString.Length == 2) { break; }
+                                    ageInput.ageString += inputValueString;
+                                }
+                                else
+                                {
+                                    //TODO TABLE WARNING 
+                                }
+                                break;
+                        };
+
+                        options[1] = "[2] Age: " + ageInput.ageString;
+                    }
+                }
+
+            } while (!allInfoDone);
+
+            int ageInt = Int32.Parse(ageInput.ageString);
+
+            return new CoachModel(
+                name: nameInput.name,
+                age: ageInt,
+                speciality:
+                specialityInput.speciality);
+        }
+
+        public static int GameOption(string[] descriptionLines, string[] options)
+        {
 
 
-            } while (!allDone);
-
-
-            return "";
-
+            return 0;
         }
 
         // private methods
@@ -119,7 +190,7 @@ namespace footbal_manager
             Console.Write(tables.ToString());
 
             // test case
-            Console.WriteLine(tables.ToString(), Color.Green); //with color
+            //Console.WriteLine(tables.ToString(), Color.Green); //with color
         }
 
         private static void TextArt(string text)
@@ -170,13 +241,13 @@ namespace footbal_manager
                     case ConsoleKey.LeftArrow:
                     case ConsoleKey.DownArrow:
 
-                        currentSelection--;
+                        currentSelection++;
                         break;
 
                     case ConsoleKey.RightArrow:
                     case ConsoleKey.UpArrow:
 
-                        currentSelection++;
+                        currentSelection--;
                         break;
 
                     case ConsoleKey.Escape:

@@ -26,3 +26,4 @@ D:/C#/Projects/footbal_manager/footbal_manager/obj/Debug/netcoreapp3.1/footbal_m
 /Users/viniciusbornholdt/Documents/Gibran/Unity/Projects/crazy_bit/footbal_manager/footbal_manager/obj/Debug/netcoreapp3.1/footbal_manager.dll
 /Users/viniciusbornholdt/Documents/Gibran/Unity/Projects/crazy_bit/footbal_manager/footbal_manager/obj/Debug/netcoreapp3.1/footbal_manager.pdb
 /Users/viniciusbornholdt/Documents/Gibran/Unity/Projects/crazy_bit/footbal_manager/footbal_manager/obj/Debug/netcoreapp3.1/footbal_manager.genruntimeconfig.cache
+/Users/viniciusbornholdt/Documents/Gibran/Unity/Projects/crazy_bit/footbal_manager/footbal_manager/obj/Debug/netcoreapp3.1/footbal_manager.csprojAssemblyReference.cache

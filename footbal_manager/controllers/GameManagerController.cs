@@ -5,8 +5,7 @@ namespace footbal_manager
 {
     public class GameManagerController
     {
-        private CoachModel coachModel;
-
+        private CoachModel coach;
 
         // init
         public GameManagerController() { }
@@ -28,14 +27,16 @@ namespace footbal_manager
         }
 
         // public methods
-        public void CreateNewCoach() //may return true to Main Method
-        {
-            
-
-            string coach = ConsoleHandler.CreateCoach();
-            
+        public void CreateNewCoach()
+        { 
+            coach = ConsoleHandler.CreateCoach();
+            SelectGameOption();
         }
 
-
+        private void SelectGameOption()
+        {
+            string[] descriptionLines = { "Hello " + coach.name , "Select your game option:" };
+            string[] options = { "[1] World Cup" };
+        }
     }
 }

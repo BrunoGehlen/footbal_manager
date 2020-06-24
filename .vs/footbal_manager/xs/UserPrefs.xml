@@ -5,11 +5,10 @@
       <File FileName="footbal_manager/_learning_support/Publication.cs" />
       <File FileName="footbal_manager/_learning_support/Book.cs" />
       <File FileName="footbal_manager/ModelsNotes.txt" />
-      <File FileName="footbal_manager/controllers/GameManagerController.cs" Line="36" Column="13" />
-      <File FileName="../../../../../../../../usr/local/share/dotnet/sdk/3.1.301/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets" Line="238" Column="20" />
-      <File FileName="footbal_manager/models/CoachModel.cs" Line="8" Column="42" NotebookId="1" />
-      <File FileName="footbal_manager/controllers/ConsoleHandler.cs" Line="59" Column="35" NotebookId="1" />
-      <File FileName="footbal_manager/models/PersonModel.cs" Line="7" Column="18" NotebookId="1" />
+      <File FileName="footbal_manager/controllers/GameManagerController.cs" />
+      <File FileName="../../../../../../../../usr/local/share/dotnet/sdk/3.1.301/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets" />
+      <File FileName="footbal_manager/controllers/ConsoleHandler.cs" Line="75" Column="74" />
+      <File FileName="footbal_manager/models/CoachModel.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">

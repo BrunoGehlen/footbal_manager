@@ -1,7 +1,7 @@
 ﻿using System;
 namespace footbal_manager
 {
-    public enum CoachSpeciality { Defencive, Balanced, Agressive }
+    public enum CoachSpeciality { Defencive, Balanced, Agressive, DefaultNone }
 
     public enum CoachCharims { Neutral, Hostile, Friendly }
 
@@ -12,14 +12,11 @@ namespace footbal_manager
         public int technique;
         public int teamWork;
 
-        public CoachModel() { }
-
-
-        public CoachModel(string name)
+        public CoachModel(string name, int age, CoachSpeciality speciality)
         {
-
             this.name = name;
-
+            this.age = age;
+            this.speciality = speciality;
         }
 
     }
