@@ -12,8 +12,7 @@ namespace footbal_manager
         public int technique;
         public int teamWork;
 
-        public CoachModel(string name, int age, CoachSpeciality speciality)
-        {
+        public CoachModel(string name, int age, CoachSpeciality speciality) {
             this.name = name;
             this.age = age;
             this.speciality = speciality;

@@ -17,8 +17,11 @@ namespace footbal_manager
         private static readonly string defaultTitle = "FOOTBAL MANAGER";
 
         // public methods
-        public static string Welcome()
-        {
+        public static string Welcome() {
+            TeamModel[] teams = TeamModel.LoadTeams();
+            foreach (TeamModel team in teams) {
+                Console.Write(team);
+            }
             Console.Clear();
 
             string[] descriptionLines = { "Welcome to Footbal Manager!", "Select your option:" };
