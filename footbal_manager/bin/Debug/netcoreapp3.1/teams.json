@@ -2,124 +2,124 @@
   {
     "team_name": "Canada",
     "fifa_code": "CAN",
-    "flag": ""
+    "flag": "🇨🇦"
   },
   {
 
     "team_name": "Scotland",
     "fifa_code": "SCO",
-    "flag": ""
+    "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿"
   },
   {
     "team_name": "Australia",
     "fifa_code": "AUS",
-    "flag": ""
+    "flag": "🇦🇺"
   },
   {
     "team_name": "Argentina",
     "fifa_code": "ARG",
-    "flag": ""
+    "flag": "🇦🇷"
   },
   {
     "team_name": "Italy",
     "fifa_code": "ITA",
-    "flag": ""
+    "flag": "🇮🇹"
   },
   {
     "team_name": "New Zealand",
     "fifa_code": "NZL",
-    "flag": ""
+    "flag": "🇳🇿"
   },
   {
-    "team_name": "Korea Republic",
+    "team_name": "South Korea",
     "fifa_code": "KOR",
-    "flag": ""
+    "flag": "🇰🇷"
 
   },
   {
     "team_name": "Thailand",
     "fifa_code": "THA",
-    "flag": ""
+    "flag": "🇹🇭"
   },
   {
     "team_name": "Chile",
     "fifa_code": "CHI",
-    "flag": ""
+    "flag": "🇨🇱"
   },
   {
-    "team_name": "China PR",
+    "team_name": "China",
     "fifa_code": "CHN",
-    "flag": ""
+    "flag": "🇨🇳"
   },
   {
     "team_name": "Japan",
     "fifa_code": "JPN",
-    "flag": ""
+    "flag": "🇯🇵"
   },
   {
     "team_name": "England",
     "fifa_code": "ENG",
-    "flag": ""
+    "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
   },
   {
     "team_name": "Norway",
     "fifa_code": "NOR",
-    "flag": ""
+    "flag": "🇳🇴"
   },
   {
     "team_name": "Brazil",
     "fifa_code": "BRA",
-    "flag": ""
+    "flag": "🇧🇷"
   },
   {
     "team_name": "Sweden",
     "fifa_code": "SWE",
-    "flag": ""
+    "flag": "🇸🇪"
 
   },
   {
     "team_name": "South Africa",
     "fifa_code": "RSA",
-    "flag": ""
+    "flag": "🇿🇦"
   },
   {
     "team_name": "Cameroon",
     "fifa_code": "CMR",
-    "flag": ""
+    "flag": "🇨🇲"
   },
   {
     "team_name": "Jamaica",
     "fifa_code": "JAM",
-    "flag": ""
+    "flag": "🇯🇲"
   },
   {
     "team_name": "USA",
     "fifa_code": "USA",
-    "flag": ""
+    "flag": "🇺🇸"
   },
   {
     "team_name": "France",
     "fifa_code": "FRA",
-    "flag": ""
+    "flag": "🇫🇷"
   },
   {
     "team_name": "Netherlands",
     "fifa_code": "NED",
-    "flag": ""
+    "flag": "🇳🇱"
   },
   {
     "team_name": "Germany",
     "fifa_code": "GER",
-    "flag": ""
+    "flag": "🇩🇪"
   },
   {
     "team_name": "Nigeria",
     "fifa_code": "NGA",
-    "flag": ""
+    "flag": "🇳🇬"
   },
   {
     "team_name": "Spain",
     "fifa_code": "ESP",
-    "flag": ""
+    "flag": "🇪🇸"
   }
 ]

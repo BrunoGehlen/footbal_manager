@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Diagnostics;
-using System.ComponentModel;
-using System.Threading;
 using System.Collections.Generic;
-using System.Text;
 using System.Drawing;
 using Console = Colorful.Console;
 using BetterConsoleTables;
@@ -17,13 +13,8 @@ namespace footbal_manager
         private static readonly string defaultTitle = "FOOTBAL MANAGER";
 
         // public methods
-        public static string Welcome() {
-            TeamModel[] teams = TeamModel.LoadTeams();
-            foreach (TeamModel team in teams) {
-                Console.Write(team);
-            }
-            Console.Clear();
-
+        public static string Welcome()
+        {
             string[] descriptionLines = { "Welcome to Footbal Manager!", "Select your option:" };
             string[] options = { "[1] New Game", "[2] About" };
 
@@ -165,6 +156,16 @@ namespace footbal_manager
                 specialityInput.speciality);
         }
 
+        public static void SelectWorldCupTeam(string[] descriptionLines, string[] teamList)
+        {
+
+            int OptionSelected = OptionChoice(false, descriptionLines, teamList);
+
+            Console.Write("Selected Team: " + teamList[OptionSelected]);
+            Console.ReadKey();
+
+        }
+
         // private methods
         private static void DefaultTitile() => ConsoleHandler.TextArt(defaultTitle);
 
@@ -189,6 +190,8 @@ namespace footbal_manager
             //Console.WriteLine(tables.ToString(), Color.Green); //with color
         }
 
+
+        // support methods
         public static void TextArt(string text)
         {
             Console.Clear();
@@ -198,7 +201,6 @@ namespace footbal_manager
 
             Console.WriteAscii(text, Color.FromArgb(red, green, blue));
         }
-
 
         public static int OptionChoice(bool canCancel, string[] descriptionLines, string[] options)
         {
