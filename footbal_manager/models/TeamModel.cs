@@ -22,5 +22,8 @@ namespace footbal_manager
             this.fifaCode = fifaCode;
             this.flag = flag;
         }
+
+        public string GetFlagName() => $"{this.flag} {this.name}";
+        public string GetFlagFifaCode() => $"{this.flag} {this.fifaCode}";
     }
 }

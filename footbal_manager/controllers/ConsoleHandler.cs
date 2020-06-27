@@ -19,8 +19,7 @@ namespace footbal_manager
             string[] options = { "[1] New Game", "[2] About" };
 
             int optionSelected = OptionChoice(false, descriptionLines, options);
-
-            return options[optionSelected].Replace(" <<", "");
+            return options[optionSelected];
         }
 
         public static CoachModel CreateCoach()
@@ -67,7 +66,7 @@ namespace footbal_manager
                         string[] specialities = { "AGRESSIVE", "DEFENCIVE", "BALANCED" };
                         int especialityChoiceIndex = OptionChoice(false, title, specialities);
 
-                        options[2] = "[3] Speciality: " + specialities[especialityChoiceIndex].Replace(" <<", "");
+                        options[2] = "[3] Speciality: " + specialities[especialityChoiceIndex];
                         options.Add("");
                         options.Add("Press Enter to continue...");
 
@@ -156,14 +155,10 @@ namespace footbal_manager
                 specialityInput.speciality);
         }
 
-        public static void SelectWorldCupTeam(string[] descriptionLines, string[] teamList)
+        public static int SelectWorldCupTeam(string[] descriptionLines, string[] teamList)
         {
-
-            int OptionSelected = OptionChoice(false, descriptionLines, teamList);
-
-            Console.Write("Selected Team: " + teamList[OptionSelected]);
-            Console.ReadKey();
-
+            int optionSelected = OptionChoiceMultiColumn("WORLD CUP", descriptionLines, teamList, 4);
+            return optionSelected;
         }
 
         // private methods
@@ -173,7 +168,7 @@ namespace footbal_manager
         {
 
             ColumnHeader header = new ColumnHeader(defaultTitle, Alignment.Left, Alignment.Center);
-            var table = new Table(header);
+            Table table = new Table(header);
 
             foreach (string descriptionLine in descriptionLines) { table.AddRow(descriptionLine); }
             table.AddRow("                                                                      ");
@@ -181,15 +176,61 @@ namespace footbal_manager
 
             table.Config = TableConfiguration.UnicodeAlt();
 
-            ConsoleTables tables = new ConsoleTables(table);
-
             DefaultTitile();
-            Console.Write(tables.ToString());
-
-            // test case
-            //Console.WriteLine(tables.ToString(), Color.Green); //with color
+            Console.Write(table.ToString());
         }
 
+        // column choice table
+        private static void MultiColumnTable(string title, string[] descriptionLines, string[] options, int numberOfColumns)
+        { 
+            // info column
+            ColumnHeader titleHeader = new ColumnHeader(title, Alignment.Left, Alignment.Center);
+            Table infoTable = new Table(titleHeader);
+
+            infoTable.AddRow("                                                      ");
+            foreach (string descriptionLine in descriptionLines) { infoTable.AddRow(descriptionLine); }
+
+            infoTable.Config = TableConfiguration.UnicodeAlt();
+
+            // options column table
+            Table optionsTable = new Table();
+
+            //  - header: empty lines space
+            for (int i = 0; i < numberOfColumns; i++)
+            {
+                string emptyHeaderSpace = " ";
+                optionsTable.AddColumn(emptyHeaderSpace);
+            }
+
+            // - columns: options
+
+            // - add rows
+            int maxRows = options.Length / numberOfColumns;
+            for (int row = 1; row <= maxRows; row++)
+            {
+                int maxOptionsRow = numberOfColumns;
+                var maxIndex = maxOptionsRow * row;
+                var minIdex = maxIndex - maxOptionsRow;
+
+                var optionsRow = new List<string>();
+
+                for (int index = minIdex; index < maxIndex; index++)
+                {
+                    optionsRow.Add(options[index]);
+                }
+
+                optionsTable.AddRow(optionsRow.ToArray());
+            }
+
+            optionsTable.AddRow("", "", "", "");
+
+            infoTable.Config = TableConfiguration.UnicodeAlt();
+            optionsTable.Config = TableConfiguration.Markdown();
+
+            DefaultTitile();
+            Console.Write(infoTable.ToString());
+            Console.Write(optionsTable.ToString());
+        }
 
         // support methods
         public static void TextArt(string text)
@@ -202,12 +243,64 @@ namespace footbal_manager
             Console.WriteAscii(text, Color.FromArgb(red, green, blue));
         }
 
+        private static int OptionChoiceMultiColumn(string title, string[] descriptionLines, string[] options, int numberOfColumns)
+        {
+            int optinsRange = options.Length - 1;
+            int currentSelection = 0;
+
+            ConsoleKey key;
+
+            Console.CursorVisible = false;
+
+            do
+            {
+                Console.Clear();
+
+                if (currentSelection < 0) { currentSelection = optinsRange; }
+                if (currentSelection > optinsRange) { currentSelection = 0; }
+
+                for (int i = 0; i < options.Length; i++)
+                {
+                    options[i] = options[i].Replace(" <<", "");
+                    if (i == currentSelection) { options[i] = options[i] + " <<"; }
+                }
+
+                // print table
+                MultiColumnTable(title, descriptionLines, options, numberOfColumns);
+
+                key = Console.ReadKey(true).Key;
+
+                switch (key)
+                {
+                    case ConsoleKey.LeftArrow:
+                        currentSelection--;
+                        break;
+
+                    case ConsoleKey.RightArrow:
+                        currentSelection++;
+                        break;
+
+                    case ConsoleKey.DownArrow:
+                        currentSelection += numberOfColumns;
+                        break;
+
+                    case ConsoleKey.UpArrow:
+                        currentSelection -= numberOfColumns;
+                        break;
+
+                    case ConsoleKey.Escape:
+                        break;
+                }
+
+            } while (key != ConsoleKey.Enter);
+
+            options[currentSelection] = options[currentSelection].Replace(" <<", "");
+            return currentSelection;
+        }
+
+        // simple choice table
         public static int OptionChoice(bool canCancel, string[] descriptionLines, string[] options)
         {
-
-            //const int optionsPerLine = 1;
-            //const int spacingPerLine = 1;
-
             int optinsRange = options.Length - 1;
             int currentSelection = 0;
 
@@ -254,8 +347,7 @@ namespace footbal_manager
 
             } while (key != ConsoleKey.Enter);
 
-            //Console.CursorVisible = true;
-
+            options[currentSelection] = options[currentSelection].Replace(" <<", "");
             return currentSelection;
         }
     }

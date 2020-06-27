@@ -11,7 +11,7 @@ namespace footbal_manager
         {
             string name;
             List<TeamModel> teams;
-            
+
         }
 
         List<TeamModel> teams;
@@ -24,15 +24,19 @@ namespace footbal_manager
 
         public void StartNewWorldCup(CoachModel coach)
         {
-            string[] description = { "Welcome to World Cup " + "[COACH NAME]" , "Please select your team:" };
-            List<string> teamListToSelection = new List<string>{};
+            string[] description = { "Welcome to World Cup " + "[COACH NAME]", "Please select your team:" };
+            List<string> teamListToSelection = new List<string> { };
 
             foreach (TeamModel team in teams)
             {
                 teamListToSelection.Add(team.name);
             }
 
-            ConsoleHandler.SelectWorldCupTeam(description, teamListToSelection.ToArray());
+            var optionSelected = ConsoleHandler.SelectWorldCupTeam(description, teamListToSelection.ToArray());
+
+            Console.Clear();
+            Console.Write("Selected Team2: " + teamListToSelection[optionSelected]);
+            Console.ReadKey();
         }
     }
 }
